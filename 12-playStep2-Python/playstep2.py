@@ -35,4 +35,21 @@
 
 def playstep2(hand, dice):
 	# your code goes here
-	pass
+	count=1
+	s=str(hand)
+	for i in range(0,len(s)-1):
+		if s[i]==s[i+1]:
+			count+=1
+	f=""
+	org=str(dice)
+	rev=str(dice)
+	rev=rev[::-1]
+	if(count<2):
+		f=s[0]+rev[:2]
+	else:
+		f=rev[0]+s[1:3]	
+	number = ''.join(sorted(f))
+	number=number[::-1]
+	if len(org)==2:
+		return (int(number),int(org[0:1]))
+	return (int(number),int(org[0:2]))

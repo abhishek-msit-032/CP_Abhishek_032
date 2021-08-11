@@ -6,7 +6,14 @@
 # are not legal values, return None, instead of crashing. 
 
 
-
+def nCr(n, r):
+    return (fact(n) / (fact(r) * fact(n - r)))
+ 
+def fact(n):
+    res = 1 
+    for i in range(2, n+1):
+        res = res * i      
+    return res
 
 def fun_pascaltrianglevalue(row, col):
-	return 1
+	return int(nCr(row,col))

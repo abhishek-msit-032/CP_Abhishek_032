@@ -8,4 +8,5 @@
 
 
 def fun_nearestbusstop(street):
-	return -1
+	lst=[0,8,16]
+	return lst[min(range(len(lst)), key = lambda i: abs(lst[i]-street))]

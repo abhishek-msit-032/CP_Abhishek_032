@@ -9,7 +9,7 @@ q.enqueue(2)
 q.enqueue(3)
 
 
-@pytest.mark.parametrize("result",[(1)])
+@pytest.mark.parametrize("result",[(3)])
 def test_peek1(result):    
     assert q.peek() == result
     

@@ -1,7 +1,7 @@
 # Write the function lookAndSay(a) that takes a list of numbers and returns a list of numbers
-# that results from "reading off" the initial list using the look-and-say method, using tuples 
+# that results from "reading off" the initial list using the look-and-say method, using tuples
 # for each (count, value) pair.
-# 
+#
 # For example:
 # lookAndSay([]) == []
 # lookAndSay([1,1,1]) == [(3,1)]
@@ -21,5 +21,14 @@
 # inverseLookAndSay([(2,3),(1,8),(4,3)]) == [3,3,8,3,3,3,3])
 
 def inverselookandsay(a):
-	# Your code goes here
-	pass
+    # Your code goes here
+    li = []
+    for i in a:
+        if len(i) == 0 or len(a) == 0:
+            return []
+        else:
+            n = i[0]
+            while(n > 0):
+                li.append(i[1])
+                n = n-1
+    return li

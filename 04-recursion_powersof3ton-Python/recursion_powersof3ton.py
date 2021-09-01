@@ -5,4 +5,20 @@
 
 def recursion_powersof3ton(n):
 	# Your code goes here
-	pass
+	
+	if (n<1):
+		return None
+	if (n==1):
+		return [1]
+	else:
+		r=[]
+		i=0
+		out=0
+		while(out<=n):
+			out=3**i
+			if out<=n:
+				r.append(out)
+			else:
+				continue
+			i=i+1
+		return r

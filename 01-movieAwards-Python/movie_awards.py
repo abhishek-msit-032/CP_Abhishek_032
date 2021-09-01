@@ -21,4 +21,10 @@ the function should return as follows
 
 def movie_awards(oscarResults):
     # Your code goes here...
-    pass
+    dic={}
+    for  i in oscarResults:
+        if i[1] in dic:
+            dic[i[1]]  +=1
+        else:
+            dic[i[1]] = 1
+    return dic
